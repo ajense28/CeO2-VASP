@@ -1,0 +1,30 @@
+# Cerium(IV) Oxide Calculation
+
+ADDGRID = .TRUE.
+ALGO = All
+EDIFF = 0.00015
+ENCUT = 520
+IBRION = 1 #-1
+ICHARG = 0;#11
+ISIF = 3
+ISMEAR = 0;#-5
+ISPIN = 1
+ISTART = 0
+ISYM = 0
+KPOINT_BSE = -1 0 0 0
+LAECHG = True
+LASPH = .TRUE.
+LCHARG = False
+LELF = True
+LORBIT = 11
+LREAL = False
+#LVHAR = True
+LWAVE = False
+NBANDS = 77
+NEDOS = 2001
+NELM = 100
+NSW = 800
+PREC = Accurate
+SIGMA = 0.05
+
+# Use cat ~/pot/Ce/POTCAR ~/pot/O/POTCAR > POTCAR

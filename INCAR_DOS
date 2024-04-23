@@ -1,0 +1,44 @@
+# CeO2 SC
+  SYSTEM  = "CeO2"
+  
+  ISTART = 1
+  LORBIT = 11 # 11 outputs PROCAR and WAVECAR
+  NSW = 0
+
+#Electronic & Ionic minimization
+  ENCUT = 520
+  EDIFF = 1E-6
+  #NELMIN = 6
+  #POTIM = 0.01
+  ICHARG = 11
+  IBRION = -1 # 0 for MD
+  EDIFFG = -0.01
+
+  ISIF = 3 # df, 3 for relax
+  ISIM = 0
+  NCORE = 4
+
+  #LREAL = .FALSE. #.False.
+  #ADDGRID = .TRUE.
+  LWAVE = .False.
+  #LCHARG = .True.
+  PREC = Accurate 
+
+#DOS
+  ISMEAR = -5
+  SIGMA = 0.03
+  NEDOS = 1000
+
+#Magnetism # CeO2 not magnetic
+ ISPIN = 1
+  #MAGMOM  = 2*2.5 2*-2.5 8*0 
+
+#Mixer
+  #AMIX = 0.2
+  #BMIX = 0.00001
+  #AMIX_MAG = 0.8
+  #BMIX_MAG = 0.00001 
+
+# Use cat ~/pot/Ce/POTCAR ~/pot/O/POTCAR > POTCAR
+!For relaxations, the DOSCAR is usually useless. If you want to get an accurate DOS for the final configuration, first copy CONTCAR to POSCAR and continue with one static (ISTART=1 NSW=0) calculation
+ 
